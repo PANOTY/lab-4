@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char hexInput[10]; // ตัวแปรเก็บค่าเลขฐาน 16
+    int decimalValue;
+
+    // รับค่าจากผู้ใช้
+    printf("User input :\n");
+    scanf("%s", hexInput);
+
+    // แปลงจากเลขฐาน 16 เป็นเลขฐาน 10
+    decimalValue = (int)strtol(hexInput, NULL, 16);
+
+    // แสดงผลเลขฐาน 2
+    printf("Output:\n");
+    for (int i = sizeof(decimalValue) * 8 - 1; i >= 0; i--) {
+        // เช็คแต่ละบิตและแสดงผลเฉพาะบิตที่ไม่เป็น 0
+        if ((decimalValue >> i) & 1) {
+            // ถ้าเป็นบิตที่เป็น 1 ให้แสดงผล
+            for (int j = i; j >= 0; j--) {
+                printf("%d", (decimalValue >> j) & 1);
+            }
+            break; // หยุดหลังจากแสดงผลแล้ว
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
