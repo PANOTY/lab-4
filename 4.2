@@ -1,0 +1,28 @@
+#include <stdio.h> // แก้ไขชื่อไฟล์เป็น <stdio.h>
+int main() {
+    int a = 0, b = 0;
+    printf("Please enter value (a b): ");
+    scanf("%d %d", &a, &b); // TODO: #11 Input variable 'a' and 'b'
+
+    // TODO: #12 Complete operator, and display all operator output. (and fix all bugs.)
+    printf("a = %d, b = %d \n", a, b);
+    printf("a + b = %d \n", a + b); // ผลรวม
+    printf("a - b = %d \n", a - b); // ผลลบ
+    printf("a * b = %d \n", a * b); // ผลคูณ
+    printf("a / b = %d (b must be greater than 0)\n", b > 0 ? a / b : 0); // ผลหาร
+    printf("a %% b = %d \n", a % b); // ผลหารเอาเศษ
+    printf("++a = %d \n", ++a); // เพิ่มค่า a ก่อนแสดงผล
+    printf("a-- = %d \n", a--); // แสดงค่า a ก่อนลดค่า
+    printf("a += 1 = %d \n", a += 1); // เพิ่มค่า a ขึ้น 1
+    printf("a += b = %d \n", a += b); // เพิ่มค่า a ขึ้น b
+    printf("a -= 1 = %d \n", a -= 1); // ลดค่า a ลง 1
+    printf("a -= b = %d \n", a -= b); // ลดค่า a ลง b
+    printf("a *= 1 = %d \n", a *= 1); // คูณ a ด้วย 1
+    printf("a *= b = %d \n", a *= b); // คูณ a ด้วย b
+    printf("a %%= 1 = %d \n", a %= 1); // หารเอาเศษกับ 1
+    printf("a %%= b = %d \n", b != 0 ? a %= b : 0); // หารเอาเศษกับ b (ต้องตรวจสอบ b > 0)
+    printf("a && b = %d \n", a && b); // การเปรียบเทียบ AND
+    printf("a || b = %d \n", a || b); // การเปรียบเทียบ OR
+    
+    return 0;
+}
